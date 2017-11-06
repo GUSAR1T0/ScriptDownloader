@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+@font-face {
+    font-family: "Moscow Sans";
+    src: url('/static/fonts/Moscow-Sans.ttf');
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Moscow Sans', serif;
+    font-weight: 500;
+    color: #333;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #484848;
+}
+
+a:hover, a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.vert-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.fixed-top {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .75);
+}
+
+body .fixed-theme {
+    background: rgba(245, 245, 245, .90) !important;
+    border-color: rgba(245, 245, 245, .90) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.navbar {
+    font-weight: 800;
+    font-size: 36px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.navbar-button {
+    color: #484848;
+}
+
+.navbar-inverse {
+    background: #f5f5f5;
+    border-color: #f5f5f5;
+}
+
+.navbar-nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 575px) and (min-width: 270px) {
+    .main-menu {
+        text-align: center;
+    }
+}
+
+@media (max-width: 270px) {
+    .main-menu {
+        text-align: center;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.title {
+    font-family: 'Moscow Sans', serif;
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 767px) {
+    .title {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.btn {
+    font-family: 'Lora', serif;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: #484848;
+}
+
+.btn-secondary {
+    background-color: #f2f2f2;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.input-group-addon,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="tel"],
+input[type="color"],
+input[type="range"],
+input[type="time"],
+input[type="week"],
+textarea,
+select {
+    color: #484848;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    border-radius: 0;
+    padding: 5px 10px;
+    outline: none;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    box-shadow: 0 0 0 0 #484848;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="range"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
+    color: #484848;
+    border-bottom-color: #484848;
+    box-shadow: 0 1px 0 0 #484848;
+}
+
+#input-field-required {
+    border-right: 2px solid rgba(201, 48, 44, 0.65);
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.register-div-block {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.entry-content {
+    padding-top: 111px;
+}
+
+.col-main {
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(200, 200, 200, 0.9);
+    float: left;
+}
+
+.col-main-page {
+    margin: 30px 0;
+    padding: 15px;
+    background: #fafafa;
+}
+
+.breadcrumb {
+    margin-top: 20px;
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+    background: rgba(200, 200, 200, .75);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(100, 100, 100, .75);
+}
+
+.breadcrumb > h1 {
+    font-family: 'Moscow Sans', serif;
+    font-weight: 900;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.footer {
+    z-index: 1;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #f5f5f5;
+}
+
+.copyright {
+    color: #484848;
+    font-size: 14px;
+    text-align: center;
+}
+
+.copyright > h6 {
+    font-family: 'Lora', serif;
+    font-weight: 300;
+}
