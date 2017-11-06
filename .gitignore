@@ -104,8 +104,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-### Example user template template
+
 ### Example user template
+scripts/
+!modules/scripts/
 
 # IntelliJ project files
 .idea
