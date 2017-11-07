@@ -114,6 +114,7 @@ body .fixed-theme {
 .title {
     font-family: 'Moscow Sans', serif;
     font-weight: 900;
+    margin: 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -125,84 +126,8 @@ body .fixed-theme {
 
 /* ------------------------------------------------------------------------------------------- */
 
-.btn {
-    font-family: 'Lora', serif;
-    font-weight: 300;
-}
-
-.btn-primary {
-    background-color: #484848;
-}
-
-.btn-secondary {
-    background-color: #f2f2f2;
-}
-
-/* ------------------------------------------------------------------------------------------- */
-
-.input-group-addon,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="tel"],
-input[type="color"],
-input[type="range"],
-input[type="time"],
-input[type="week"],
-textarea,
-select {
-    color: #484848;
-    border: none;
-    border-bottom: 1px solid #e4e4e4;
-    border-radius: 0;
-    padding: 5px 10px;
-    outline: none;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-    box-shadow: 0 0 0 0 #484848;
-    font-family: 'Lora', serif;
-    font-weight: 300;
-    text-align: center;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-input[type="range"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-textarea:focus,
-select:focus {
-    color: #484848;
-    border-bottom-color: #484848;
-    box-shadow: 0 1px 0 0 #484848;
-}
-
-#input-field-required {
-    border-right: 2px solid rgba(201, 48, 44, 0.65);
-}
-
-/* ------------------------------------------------------------------------------------------- */
-
-.register-div-block {
-    line-height: 28px;
-    margin-bottom: 25px;
+#loading-status .alert > strong {
+    font-weight: 900;
 }
 
 /* ------------------------------------------------------------------------------------------- */
@@ -230,7 +155,7 @@ select:focus {
     display: flex;
     background: rgba(200, 200, 200, .75);
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(100, 100, 100, .75);
+    box-shadow: 0 1px 5px rgba(100, 100, 100, .75);
 }
 
 .breadcrumb > h1 {

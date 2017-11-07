@@ -22,7 +22,7 @@ def _save(scripts: dict, path_to_scripts: str) -> None:
             out.write(scripts[script])
 
 
-def get_scripts(site_urls: list, path_to_scripts: str) -> None:
+def download_scripts(site_urls: list, path_to_scripts: str) -> None:
     from core.scripts.parser import ScriptParser
 
     scripts = ScriptParser.parse(site_urls)
