@@ -19,6 +19,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^', include('models.main.urls')),
-    url(r'^loader/', include('models.loader.urls'))
+    url(r'^loader/', include('models.loader.urls')),
+    url(r'^presenter/', include('models.presenter.urls')),
     # url(r'^admin/', admin.site.urls),
 ]

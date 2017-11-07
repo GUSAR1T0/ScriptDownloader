@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Presenter{% endblock %}
+{% block breadcrumb %}
+    <i class="fa fa-long-arrow-right"></i>
+    <a href="/presenter/">PRESENTER</a>
+{% endblock %}
+{% block main %}
+    <div>
+        <div class="container clearfix">
+            <div class="row">
+                <div class="col-main col-main-page col-12">
+                    <h3 align="center">ALL DOWNLOADED SCRIPTS ARE BELOW</h3>
+                    <hr>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                    <hr>
+                    <div class="scripts">
+                        {% for file, content in scripts.items %}
+                            <h5><label for="{{ file }}">{{ file }}</label></h5>
+                            <textarea class="form-control" id="{{ file }}" rows="10" disabled>{{ content }}</textarea>
+                            <hr>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
