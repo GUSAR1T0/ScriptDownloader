@@ -1,0 +1,6 @@
+web:
+  restart: always
+  build: .
+  ports: - "8000:8000"
+  volumes:
+    - ./web:/web/
