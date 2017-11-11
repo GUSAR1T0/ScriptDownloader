@@ -18,8 +18,8 @@ from django.conf.urls import url
 # from django.contrib import admin
 
 urlpatterns = [
-    url(r'^', include('models.main.urls')),
-    url(r'^loader/', include('models.loader.urls')),
-    url(r'^presenter/', include('models.presenter.urls')),
+    url(r'^', include('project.models.main.urls')),
+    url(r'^loader/', include('project.models.loader.urls')),
+    url(r'^presenter/', include('project.models.presenter.urls')),
     # url(r'^admin/', admin.site.urls),
 ]

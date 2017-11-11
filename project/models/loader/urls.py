@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from models.loader.views import loader_view
-from models.loader.helper import load_process
+from project.models.loader.helper import load_process
+from project.models.loader.views import loader_view
 
 urlpatterns = [
     url(r'^$', loader_view, name='loader'),
