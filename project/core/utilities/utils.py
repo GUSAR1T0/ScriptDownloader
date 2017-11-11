@@ -5,7 +5,7 @@ def load_content(url: str) -> str:
 
 def get_absolute_link(source_link: str, site_url: str) -> str:
     import re
-    from core.utilities.parser import parse_protocol_and_domain
+    from project.core.utilities.parser import parse_protocol_and_domain
 
     protocol_pattern = re.compile(r'^https?://.*$')
     if protocol_pattern.search(source_link):

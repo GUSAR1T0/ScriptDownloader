@@ -1,6 +1,6 @@
 import os
 
-from ScriptDownloader import settings
+from configuration import settings
 
 
 def load_scripts():

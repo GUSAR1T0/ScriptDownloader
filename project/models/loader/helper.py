@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 
-from core.scripts.handler import download_scripts
-from ScriptDownloader import settings
+from configuration import settings
+from project.core.scripts.handler import download_scripts
 
 
 def load_process(request):

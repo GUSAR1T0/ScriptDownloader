@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from models.presenter.helper import load_scripts
+from project.models.presenter.helper import load_scripts
 
 
 def presenter_view(request):

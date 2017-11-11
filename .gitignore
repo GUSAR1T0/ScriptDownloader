@@ -107,7 +107,7 @@ venv.bak/
 
 ### Example user template
 scripts/
-!core/scripts/
+!project/core/scripts/
 
 # IntelliJ project files
 .idea

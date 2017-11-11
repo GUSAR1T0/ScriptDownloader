@@ -1,5 +1,5 @@
 def _load(scripts: list) -> dict:
-    from core.utilities.utils import load_content
+    from project.core.utilities.utils import load_content
 
     scripts_dict = dict()
     for script in scripts:
@@ -9,8 +9,8 @@ def _load(scripts: list) -> dict:
 
 def _save(scripts: dict, path_to_scripts: str) -> None:
     import os
-    from core.utilities.parser import parse_domain
-    from core.utilities.parser import parse_filename
+    from project.core.utilities.parser import parse_domain
+    from project.core.utilities.parser import parse_filename
 
     for script in scripts:
         directory = os.path.join(path_to_scripts, parse_domain(script))
@@ -23,7 +23,7 @@ def _save(scripts: dict, path_to_scripts: str) -> None:
 
 
 def download_scripts(site_urls: list, path_to_scripts: str) -> None:
-    from core.scripts.parser import ScriptParser
+    from project.core.scripts.parser import ScriptParser
 
     scripts = ScriptParser.parse(site_urls)
     scripts_dict = _load(scripts)
