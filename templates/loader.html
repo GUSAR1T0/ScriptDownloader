@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}Loader{% endblock %}
+{% block breadcrumb %}
+    <i class="fa fa-long-arrow-right"></i>
+    <a href="/loader/">LOADER</a>
+{% endblock %}
+{% block main %}
+    <div>
+        <div class="container clearfix">
+            <div class="row">
+                <div class="col-main col-main-page col-12">
+                    <h3 align="center">HOW TO DOWNLOAD THE SCRIPTS FROM THE NEEDED SITES</h3>
+                    <hr>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                    <hr>
+                    <div class="form-group">
+                        <h5><label for="sites">List of sites:</label></h5>
+                        <textarea class="form-control" id="sites" rows="3"></textarea>
+                    </div>
+                    <hr>
+                    <div id="loading-status"></div>
+                    <button id="load-btn" class="btn btn-outline-secondary btn-lg btn-block">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+        var load_button = "#load-btn";
+
+        $(load_button).click(function (event) {
+            var sites = $("#sites").val();
+            var load = "#loading-status";
+
+            event.preventDefault();
+            $.ajax({
+                type: "GET",
+                url: '{% url 'load_process' %}',
+                data: {
+                    'sites': sites
+                },
+                dataType: 'json',
+                success: function (data) {
+                    if (data.is_successful) {
+                        $(load).html(
+                            '<div class="col-12 alert alert-success" align="center">' +
+                            '<strong>Download is successful.</strong></div>'
+                        );
+                        flick(load);
+                        $(load_button).attr("disabled", false);
+                    } else {
+                        $(load).html(
+                            '<div class="col-12 alert alert-danger" align="center">' +
+                            '<strong>Download is failed.</strong><br>' + data.errmsg +
+                            '</div>'
+                        );
+                        flick(load);
+                        $(load_button).attr("disabled", false);
+                    }
+                },
+                error: function (xhr, errmsg, err) {
+                    $(load).html(
+                        '<div class="col-12 alert alert-danger" align="center">' +
+                        '<strong>Download is failed.</strong><br>' + errmsg +
+                        '</div>'
+                    );
+                    flick(load);
+                    $(load_button).attr("disabled", false);
+                }
+            });
+            flick(load);
+            $(load).html('<div class="col-12 alert alert-warning" align="center">' +
+                '<strong>Download is in progress... Please wait.</strong></div>');
+            $(load_button).attr("disabled", true);
+        });
+
+        function flick(obj) {
+            $(obj).fadeTo(1, 1).fadeTo(150, 0.5).fadeTo(150, 1);
+        }
+    </script>
+{% endblock %}

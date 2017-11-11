@@ -1,7 +1,7 @@
 from html.parser import HTMLParser
 
-from modules.utils import get_absolute_link
-from modules.utils import load_content
+from core.utilities.utils import get_absolute_link
+from core.utilities.utils import load_content
 
 
 class ScriptParser(HTMLParser):
