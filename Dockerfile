@@ -7,8 +7,8 @@ RUN echo "Europe/Moscow" > /etc/timezone && \
 
 RUN mkdir /web
 WORKDIR /web
-ADD requirements.txt /web/
+ADD requirements.txt /web
 RUN pip install -r requirements.txt
-ADD . /web/
+ADD . /web
 
-CMD [ "/web/manage.py", "runserver", "0.0.0.0:8000" ]
+CMD [ "python3", "/web/manage.py", "runserver", "0.0.0.0:8000" ]
